@@ -12,17 +12,29 @@
     <body>
         <div class="container">
             <form method="POST" action="exercice4.html">
-                <label for='lastname'> Nom : </label>
-                <input type="text" name="lastname" id="nom" placeholder="entrez votre nom" class="form-control">    
+                <label for="lastname"> Nom : </label>
+                <input type="text" name="lastname" id="lastname" aria-placeholder="entrez votre nom" placeholder="entrez votre nom" class="form-control">     
         
-                <label for='firstname'> Prénom :</label>
-                <input type='text' name='firstname' id='firstname'><br>
+                <label for="firstname"> Prénom :</label>
+                <input type="text" name="firstname" id="firstname" aria-placeholder="entrez votre nom" placeholder="entrez votre nom" class="form-control">
 
-                <label for='ville'> Ville :</label>
-                <input type='text' name='ville' id='ville'><br>
+                <label for="city"> Ville :</label>
+                <input type="text" name="city" id="city" aria-placeholder="entrez votre ville" placeholder="entrez votre ville" class="form-control">
 
-                <input type='submit' value='ok'>
+                <!--bootstrap-->
+                <button class="btn btn-primary mt-2" onclick="sendData()">Envoyer le formulaire</button>
+            </form>    
         </div>
+
+        <!--javascript-->
+        <script>
+            function sendData(){
+            var lastname= document.getElementById('lastname').value; 
+            var firstname= document.getElementById('firstname').value;
+            var city=document.getElementById('city').value;
+            alert ('Nom : '+lastname+'\n'+'Prénom : '+firstname+'\n'+'city : '+city);
+            }
+        </script>
 
 
 
